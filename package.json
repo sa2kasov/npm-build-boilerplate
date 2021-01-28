@@ -1,7 +1,7 @@
 {
   "name": "npm-build-boilerplate",
   "version": "1.0.0",
-  "description": "This boilerplate is all about using npm as build commands",
+  "description": "This boilerplate is all about using npm scripts as a build tool",
   "main": "index.js",
   "scripts": {
     "postinstall": "run-s clean build watch",
