@@ -14,3 +14,67 @@ This boilerplate is all about using npm scripts as a build tool
 * `svgo` SVG optimizer
 * `uglify-js` JavaScript minifier, compressor and beautifier toolkit
 
+## Tasks list
+### `postinstall`
+`run-s clean build watch`
+
+### `build`
+`run-s build:*`
+
+### `build:css`
+`npm run lint:scss && npm run scss && npm run prefixer`
+
+### `build:img`
+`npm run imagemin && npm run svg`
+
+### `build:js`
+`npm run lint && npm run uglify`
+
+### `clean`
+`rimraf dist`
+
+### `imagemin`
+`imagemin src/img/*.{jpg,JPG,jpeg,png,PNG,gif,GIF,webp} --out-dir=dist/img`
+
+### `lint`
+`eslint src/js`
+
+### `lint:scss`
+`stylelint src/scss/*.scss --syntax scss`
+
+### `prefixer`
+`postcss dist/css/*.css -u autoprefixer --autoprefixer.browsers 'last 5 versions' -r`
+
+### `sass-update`
+`sass --update src/scss:dist/css`
+
+### `sass-watch`
+`sass --watch --style=compressed src/scss:dist/css`
+
+### `scss`
+`sass --embed-source-map --style=compressed src/scss:dist/css`
+
+### `serve`
+`browser-sync start --server --files 'index.html dist/css/*.css dist/img/*/** dist/css/*.js'
+ --no-inject-changes`
+
+### `start`
+`run-p watch`
+
+### `svg`
+`svgo -f src/img -o dist/img && svg-sprite-generate -d dist/img -o dist/img/sprite.svg`
+
+### `uglify`
+`npx mkdirp dist/js && uglifyjs src/js/*.js -m -b -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js`
+
+### `watch`
+`run-p serve watch:*`
+
+### `watch:css`
+`onchange src/scss/*.scss -- npm run build:css`
+
+### `watch:img`
+`onchange src/img/**/* -- npm run build:img`
+
+### `watch:js`
+`onchange src/js/*.js -- npm run build:js`
