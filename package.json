@@ -17,7 +17,7 @@
     "sass-update": "sass --update src/scss:dist/css",
     "sass-watch": "sass --watch --style=compressed src/scss:dist/css",
     "scss": "sass --embed-source-map --style=compressed src/scss:dist/css",
-    "serve": "browser-sync start --server --files 'index.html dist/css/*.css dist/img/*/** dist/css/*.js' --no-inject-changes",
+    "serve": "browser-sync start --server dist --files 'index.html dist/css/*.css dist/img/*/** dist/css/*.js' --no-inject-changes",
     "start": "run-p watch",
     "svg": "svgo -f src/img -o dist/img && svg-sprite-generate -d dist/img -o dist/img/sprite.svg",
     "uglify": "npx mkdirp dist/js && uglifyjs src/js/*.js -m -b -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js",
