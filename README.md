@@ -16,7 +16,7 @@ This boilerplate is all about using npm scripts as a build tool
 
 ## Tasks list
 ### `postinstall`
-`run-s clean build watch`
+`npm run start`
 
 ### `build`
 `run-s build:*`
@@ -59,7 +59,7 @@ This boilerplate is all about using npm scripts as a build tool
  --no-inject-changes`
 
 ### `start`
-`run-p watch`
+`run-s clean build watch`
 
 ### `svg`
 `svgo -f src/img -o dist/img && svg-sprite-generate -d dist/img -o dist/img/sprite.svg`
