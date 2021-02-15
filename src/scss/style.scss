@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* Basic styles */
+@import "normalize";
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "core";
+
+/* Template blocks */
+@import "blocks/header";
+@import "blocks/content";
+@import "blocks/sidebar";
+@import "blocks/footer";
+
+/* Vendors */
+@import "vendor/vendor-styles-example";

@@ -11,6 +11,7 @@ module.exports = {
         "ecmaVersion": 12,
         "sourceType": "module"
     },
+    "ignorePatterns": [],
     "rules": {
         "semi": [2, "always"]
     }
