@@ -13,7 +13,7 @@
     "clean": "rimraf dist",
     "imagemin": "imagemin src/img/*.{jpg,JPG,jpeg,png,PNG,gif,GIF,webp} --out-dir=dist/img",
     "lint": "eslint src/js",
-    "lint:scss": "stylelint src/scss/*.scss --syntax scss",
+    "lint:scss": "stylelint src/scss/**/*.scss --syntax scss",
     "prefixer": "postcss dist/css/*.css -u autoprefixer --autoprefixer.browsers 'last 5 versions' -r",
     "sass-update": "sass --update src/scss:dist/css",
     "sass-watch": "sass --watch --style=compressed src/scss:dist/css",
