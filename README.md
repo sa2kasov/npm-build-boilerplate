@@ -43,7 +43,7 @@ This boilerplate is all about using npm scripts as a build tool
 `eslint src/js`
 
 ### `lint:scss`
-`stylelint src/scss/*.scss --syntax scss`
+`stylelint src/scss/**/*.scss --syntax scss`
 
 ### `prefixer`
 `postcss dist/css/*.css -u autoprefixer --autoprefixer.browsers 'last 5 versions' -r`
