@@ -25,7 +25,7 @@ This boilerplate is all about using npm scripts as a build tool
 `npm run lint:scss && npm run scss && npm run prefixer`
 
 ### `build:html`
-`cp index.html build`
+`cp index.html dist`
 
 ### `build:img`
 `npm run imagemin && npm run svg`
@@ -55,7 +55,7 @@ This boilerplate is all about using npm scripts as a build tool
 `sass --watch --style=compressed src/scss:dist/css`
 
 ### `scss`
-`sass --embed-source-map --style=compressed scss/style.scss dist/css/style.min.css`
+`sass --no-source-map --style=compressed src/scss/style.scss dist/css/style.min.css`
 
 ### `serve`
 `browser-sync start -s dist -f 'dist/**/*' --port 9000 --no-inject-changes`

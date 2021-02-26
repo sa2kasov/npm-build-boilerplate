@@ -1,14 +1,13 @@
 @charset "UTF-8";
 
+/* Vendors */
+@import "vendor/normalize";
+
 /* Basic styles */
-@import "normalize";
 @import "variables";
 @import "fonts";
 @import "mixins";
 @import "core";
-
-/* Vendors */
-@import "vendor/vendor-styles-example";
 
 /* Template blocks */
 @import "blocks/header";
