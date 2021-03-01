@@ -24,8 +24,11 @@ This boilerplate is all about using npm scripts as a build tool
 ### `build:css`
 `npm run lint:scss && npm run scss && npm run prefixer`
 
+### `build:fonts`
+`build:fonts": "cp -R src/fonts dist`
+
 ### `build:html`
-`cp index.html dist`
+`cp src/index.html dist`
 
 ### `build:img`
 `npm run imagemin && npm run svg`
@@ -76,10 +79,13 @@ This boilerplate is all about using npm scripts as a build tool
 `onchange src/scss/*.scss -- npm run build:css`
 
 ### `watch:html`
-`onchange index.html -- npm run build:html`
+`onchange src/index.html -- npm run build:html`
 
 ### `watch:img`
 `onchange src/img/**/* -- npm run build:img`
 
 ### `watch:js`
 `onchange src/js/*.js -- npm run build:js`
+
+## License
+Source code is distributed under MIT license
